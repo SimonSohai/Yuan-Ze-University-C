@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>計算機程式</title>
+    <style type="text/css">
+		:root{
+    --hoverColor: rgb(239, 56, 126);
+}
+		*{
+			margin: 0;
+			padding: 0;
+			list-style: none;
+		}
+		#menu_control{
+			position: absolute;
+			z-index: -2;
+			opacity: 0;
+		}
+		.header{
+			position: sticky;
+        		top: 0px;
+			height: 50px;
+		}
+		img{
+			height: auto;
+          	max-width: 100%;
+              border-radius: 1rem;
+		}
+		.logo{
+			width: 60px;
+			height: 40px;
+			margin-left: 10px;
+		}
+		.log a{
+			display: block;
+			height: 40px;
+		}
+		.logo img{
+			display: block;
+		}
+		.menu_btn{
+			width: 40px;
+			height: 40px;
+			background-color:#000 ;
+			display: block;
+			position: absolute;
+			top: 5px;
+			right: 10px;
+			border-radius: 0.5rem;
+		}
+		.menu_btn span{
+			opacity: 0;
+			width: 1px;
+			height: 1px;
+			display: block;
+			overflow: hidden;
+		}
+		.menu_btn::before{
+			content: '';
+			position: absolute;
+			height: 2px;
+			left: 2px;
+			width: 36px;
+			background-color: #ccc;
+			top: 0;
+			bottom: 0;
+			margin: auto;
+			box-shadow: 0px 8px 0px #ccc,
+						0px -8px 0px #ccc;
+		}
+		nav{
+			width: 40%;
+			height: 274px;
+			background-color: rgba(237, 148, 148, 0.941);
+			position: absolute;
+			top: 50px;
+			right: -100%;
+			transition: .8s;
+			border-radius: 0.5rem;
+		}
+		nav a:hover {
+        background-color: white;
+        color: rgba(237, 148, 148, 0.941);
+        }
+		nav a{
+			display: block;
+			text-decoration: none;
+			color:white ;
+			padding: 10px 20px;
+         background-color: palevioletred;
+			border-bottom: 1px solid white;
+			border-radius: 0.5rem;
+			border: 2px solid var(--hoverColor);
+		}
+		#menu_control:checked ~ .header nav{
+			right: 0;
+		}
+		@media screen and (min-width:768px){
+			.menu_btn{display: none;}
+			body { 
+            width: 30%;
+            margin: 0 auto;}
+        main {
+            height: auto;
+          	max-width: 100%;
+        }
+			.header{
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+			}
+			nav{
+				position: relative;
+				right: 0;
+				display: flex;
+				width: auto;
+				height: auto;
+				top: 0;
+				background-color: transparent;
+			}
+			nav a{
+				border-bottom: none;
+			}
+		}
+		body {
+            width: 100%; 	
+            margin: 0 auto;
+        }	
+        header {
+            display:flex;justify-content: center;align-items: center;
+            width: 100%;
+            height: 80px;	  
+            		
+        }	
+        main {
+            width: 49%;
+            height: 400px;
+            float: left;	
+        }
+        aside {
+            width: 49%;
+            height: 400px;		
+            float: right;	
+        }
+		#background{
+			width: 100%;
+			height: 100%;
+		}
+		.A{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+			min-height: 100vh;
+			text-align: center;
+			font-weight: bold;
+			justify-content: center;
+			flex-direction: row;
+			align-content: center;
+			flex-wrap: wrap;
+		}
+		.B{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+   
+		}
+      .C{
+			width: 100%;
+			min-width: 600px;
+			max-width: 960px;
+			margin: 0 auto;
+            background-color: #ccc;
+            border-radius: 0.5rem;
+		}
+	</style>
+</head>
+<body id="background">
+
+   <div class="B">
+	<header><h1 style="color: white;">作品成果</h1></header>
+	<input type="checkbox" name="" id="menu_control">
+
+	<div class="header">
+		<h1 class="logo">
+			<a href="https://simonsohai.github.io/Yuan-Ze-University/%E4%BD%9C%E5%93%81%E6%88%90%E6%9E%9C%E8%88%87%E5%80%8B%E4%BA%BA%E5%AD%97%E4%BB%8B.html">
+				<img  style="width: 45px;height: 45px;" src="https://i.imgur.com/tCLFr5w.png"></a>
+		</h1>
+		<label for="menu_control" class="menu_btn">
+			<span>選單</span>
+		</label>
+		<nav>
+			<a href="https://simonsohai.github.io/Tamkang-University-book-review/%E6%9B%B8%E5%AF%A9%E6%9F%A5%E9%96%B1.html" >書審</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-myself/%E8%87%AA%E6%88%91%E4%BB%8B%E7%B4%B9.html">個人介紹</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-learning/%E8%87%AA%E5%AD%B8%E7%B6%B2%E7%AB%99.html">討論與自學網站</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-01/%E8%AD%89%E7%85%A7.html">證照</a>
+			<a href="https://drive.google.com/file/d/1phBzw7RRp3PUlyhSIqLSb5JGA9CThrzB/view?usp=sharing">專題製作</a>
+			<a href="https://simonsohai.github.io/Tamkang-University-phone-num/%E8%81%AF%E7%B5%A1%E8%B3%87%E8%A8%8A.html">聯絡資訊</a>
+			</nav>
+	</div>
+   <div class="C">
+    <h3>撰寫者：郭子綸</h3>
+    <h1>Coursera自學的測驗</h1>
+    <img src="https://i.imgur.com/vrKeaB9.png">
+    <h2>(這題主要是考收到的一些日期，並要計算出該日期為星期幾)我先寫了一個判斷是來判段該年是否為閏年，再計算每個輸入行，若輸入的「月」有誤請輸出 -1若輸入的「月」無誤但「日」有誤請輸出 -2，再定義每個月份的日期，最後就可推斷出該日期為星期幾。</h2>
+    <img src="https://i.imgur.com/crNUtt7.png"><br>
+    <img src="https://i.imgur.com/PGCzTea.png"><br>
+    <hr>
+    <div>
+    <h3>程式碼</h3>
+
+    #include <stdio.h><br>
+
+    int main ()<br>
+        {<br>
+            <blockquote>int y, d;<br>
+            int n;<br>
+            int month, day;<br>
+            int leap_year;<br>
+            int days;
+        
+           scanf ( "%d%d", &y, &d );<br>
+           scanf ( "%d", &n );<br><br>
+        
+           leap_year = y % 400 == 0 || ( y % 100 && y % 4 == 0 ); //閏年還是非閏年<br><br>
+        
+           for ( int i = 0; i < n; i++ ) {    //計算每個輸入行</blockquote>
+            <blockquote><blockquote>if ( i ) printf ( " " );<br><br>
+        
+              days = d;<br>
+              scanf ( "%d%d", &month, &day );<br><br>
+        
+              if ( month < 1 || month > 12 ) { //若輸入的「月」有誤請輸出 -1<br>
+                 printf ( "-1\t" );<br>
+                 continue;<br>
+              }<br>
+              if ( day < 1 ) {   //若輸入的「月」無誤但「日」有誤請輸出 -2<br>
+                 printf ( "-2\t" );
+                 continue;<br>
+              }<br>
+              else {</blockquote></blockquote>
+                <blockquote><blockquote><blockquote>switch ( month ) {</blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote>case 2:</blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote><blockquote>if ( ( leap_year && day > 29 ) ||<br>
+                            ( !leap_year && day > 28 ) ) {<br>
+                          printf ( "-2\t" );<br>
+                          continue;<br>
+                       }<br>
+                       break;<br>
+                    case 4: case 6: case 9: case 11:<br>
+                    if ( day > 30 ) {<br>
+                          printf ( "-2\t" );<br>
+                          continue;<br>
+                       }<br>
+                       break;<br>
+                    default:<br>
+                    if ( day > 31 ) {<br>
+                          printf ( "-2\t" );<br>
+                          continue;<br>
+                       }</blockquote></blockquote></blockquote></blockquote></blockquote>
+                       <blockquote><blockquote><blockquote><blockquote>}</blockquote></blockquote></blockquote></blockquote>
+                       <blockquote><blockquote><blockquote>}</blockquote></blockquote></blockquote>
+        
+                    <blockquote><blockquote>for ( int m = 1; m < month; m++ ) {</blockquote></blockquote>
+                    <blockquote><blockquote><blockquote>switch ( m ) {</blockquote></blockquote></blockquote><br>
+                    <blockquote><blockquote><blockquote><blockquote>case 2:   //定義2月份的日期</blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote><blockquote>if ( leap_year ) days += 29;<br>
+                       else days += 28;<br>
+                       break;</blockquote></blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote>case 4: case 6: case 9: case 11: //定義為30天的月份</blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote><blockquote>days += 30;<br>
+                       break;</blockquote></blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote>default:      //其餘的月份定義為31天</blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote><blockquote><blockquote>>days += 31;</blockquote></blockquote></blockquote></blockquote></blockquote>
+                    <blockquote><blockquote><blockquote>}</blockquote></blockquote></blockquote>
+                    <blockquote><blockquote> }</blockquote></blockquote>
+        
+              <blockquote><blockquote><blockquote>days += ( day - 1 );<br>
+              printf ( "%d\t", days % 7 );</blockquote></blockquote></blockquote>
+              <blockquote><blockquote>}</blockquote></blockquote>
+              <blockquote>return 0;</blockquote>
+        }
+</div>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.globe.min.js"></script>
+        <script>
+VANTA.GLOBE({
+  el: "#background",
+  mouseControls: true,
+  touchControls: true,
+  gyroControls: false,
+  minHeight: 200.00,
+  minWidth: 200.00,
+  scale: 1.00,
+  scaleMobile: 1.00,
+  color: 0xfcfcfc,
+  backgroundColor: 0x449393
+})
+        </script>
+</body>
+</html>
